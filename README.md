@@ -225,7 +225,7 @@ Verificação da produtividade média por classe de produto.
 
 ## Análise Dump
 
-Foi gerado um arquivo no colab para uma melhor visualização das tabelas utilizadas e geradas, que se encontra no seguinte link: [Google Colab](https://colab.research.google.com/drive/14LJED4fVj0MgKBq0-wWp29-4aUMzfqw5?usp=sharing)
+Foi criado um arquivo no colab para uma melhor visualização das tabelas utilizadas e geradas, que se encontra no seguinte link: [Google Colab](https://colab.research.google.com/drive/14LJED4fVj0MgKBq0-wWp29-4aUMzfqw5?usp=sharing)
 
 A análise foi realizada em cima do arquivo `Dump_Safras_2019a2020_(MariaDB).sql`, que contém a estrutura de um banco de dados disponibilizado pela CESB.
 
