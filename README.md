@@ -222,6 +222,9 @@ Verificação da produtividade média por classe de produto.
 </div>
 
 > A classe de produto "FITO-HORMÔNIO" mostra a maior produtividade média. Quais fatores podem estar impulsionando essa eficácia em comparação com outras classes, como "BIOSTIMULANTE" e "FUNGICIDA"?
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 Analise Erik Freundt - 
 
 09b-Colheita_Custos_2016a2024
