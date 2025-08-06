@@ -222,6 +222,194 @@ Verificação da produtividade média por classe de produto.
 </div>
 
 > A classe de produto "FITO-HORMÔNIO" mostra a maior produtividade média. Quais fatores podem estar impulsionando essa eficácia em comparação com outras classes, como "BIOSTIMULANTE" e "FUNGICIDA"?
+Analise Erik Freundt - 
+
+09b-Colheita_Custos_2016a2024
+
+
+ Visão Geral — Estatísticas
+Indicador	Valor Médio	Mínimo	Máximo
+Produtividade final (sc/ha)	67,9	55,4	80,1
+Custo total por hectare (R$)	R$ 3.650	R$ 3.400	R$ 4.050
+Custo por saca produzida (R$/sc)	R$ 54,42	R$ 50,56	R$ 61,37
+Dose de fertilizante (kg/ha)	250 kg	200	300
+Dose de agroquímico (ml/ha)	1.200 ml	900	1.500
+
+ Análise Integrada
+ Melhor desempenho produtivo: Propriedade 1002
+Produtividade: 80,1 sc/ha
+
+Fertilizante: Ureia, 250 kg/ha, aplicado como "Incorporado"
+
+Agroquímicos: 2 fungicidas, total de 900 ml/ha
+
+Custo por saca: R$ 50,56 (mais baixo)
+
+ Insight:
+Uso de fungicidas e adubação incorporada pode estar relacionado a maior produtividade e eficiência.
+
+Pior desempenho produtivo: Propriedade 1003
+Produtividade: 55,4 sc/ha
+
+Fertilizante: KCl, 200 kg/ha, "Cobertura"
+
+Agroquímicos: Herbicida com maior dose: 1.500 ml/ha
+
+Custo por saca: R$ 61,37 (mais alto)
+
+Insight:
+Apesar do alto investimento em agroquímico, a produtividade foi a menor. Pode indicar uso ineficiente ou problemas não resolvidos com herbicida isolado.
+
+ Intermediário: Propriedade 1001
+Produtividade: 68,2 sc/ha
+
+Fertilizante: MAP, 300 kg/ha, cobertura
+
+Agroquímico: Herbicida Roundup, 1.200 ml/ha
+
+Custo por saca: R$ 51,32
+
+Insight:
+Alta dose de fertilizante (300 kg/ha) resultou em produtividade acima da média com custo competitivo.
+Contudo, não usou fungicida — talvez exista margem de melhora.
+
+Conclusões
+Uso de fungicidas parece influenciar positivamente a produtividade e o custo por saca.
+
+Alta dose de agroquímico não garante bom resultado, especialmente se for só herbicida.
+
+Modo de aplicação do fertilizante (incorporado vs cobertura) pode influenciar no aproveitamento nutricional.
+
+Fazer análise real com seus dados usando esse mesmo modelo.
+
+Criar gráficos como:
+
+Produtividade vs Custo por saca
+
+Fertilizante vs Produtividade
+
+Classe de agroquímico vs Peso mil grãos (se disponível)
+
+Identificar propriedades com baixo custo e alta produtividade → replicar práticas.
+
+Identificar ineficiências (alto custo com baixa produtividade) → investigar causas.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+08-Tecnologia_2016a2024.xlsx
+O que contém:
+Essa planilha armazena informações sobre o nível tecnológico adotado na produção agrícola, com campos como:
+
+Cultivar_Utilizado, Populacao_Plantas, Espacamento, Biotecnologia, Uso_Piloto_Automatico, Uso_App_Monitoramento, Tipo_Plantio, Tipo_Colheita, entre outros.
+
+ Análise:
+Esse arquivo é essencial para entender o perfil tecnológico das propriedades. Mostra o grau de mecanização, tipo de manejo, e decisões agronômicas adotadas.
+Entretanto, é comum encontrar campos faltantes ou marcados como #N/D, o que pode indicar falha no registro ou baixa adoção.
+
+Combinado com produtividade e custos, esse dado ajuda a identificar se tecnologia está gerando resultado de fato.
+
+ Perguntas:
+Os cultivares utilizados foram definidos com base em características técnicas, produtividade anterior ou recomendação de consultores?
+
+O uso de biotecnologia está disseminado nas lavouras? Há casos em que foi evitada? Por quê?
+
+O uso de piloto automático ou apps é medido realmente no campo ou apenas relatado?
+
+Os dados de população de plantas e espaçamento são medidos na prática ou estimados com base no plano de plantio?
+
+Qual é o motivo da grande quantidade de registros vazios em campos como Tipo_Colheita ou Uso_App_Monitoramento? Falta de adoção ou de coleta?
+
+Existe algum estudo interno correlacionando nível de tecnologia com produtividade nas propriedades participantes?
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+09a-Colheita_Custos_2016a2024.xlsx
+essa planilha reúne dados detalhados da colheita e dos custos de produção, com campos como:
+
+Produtividade_Final_kg_ha, Peso_Bruto_kg, Umidade, Impureza, Avariados,
+
+Custo_Mao_de_Obra, Custo_Defensivos, Custo_Adubacao, Custo_Total_ha, entre muitos outros.
+
+Análise:
+Esse é um dos arquivos mais ricos da base. Permite análises profundas de eficiência econômica, comparando custo por hectare com produtividade.
+Por outro lado, muitos dados aparecem zerados ou em branco — principalmente nos componentes de custo — o que pode indicar falhas na coleta ou falta de detalhamento real do produtor.
+
+A planilha ainda traz dados operacionais da colheita, como stand de plantas, inserção de vagens, pesagem e armazém — raramente vistos com esse nível de granularidade.
+
+Perguntas:
+
+Como são calculados os custos por hectare (real, estimado ou tabela padrão)?
+
+Os dados de qualidade dos grãos (umidade, impureza, esverdeado) são coletados via laboratório, armazém ou autoavaliação?
+
+A produtividade final é medida com auditoria de campo ou autodeclarada?
+
+Há inconsistência entre produtividade muito alta com custo zero — isso é erro de preenchimento ou a área foi subsidiada?
+
+Os registros de componentes de custo (mão de obra, defensivos) estão zerados em muitos casos. Por que isso acontece?
+
+As auditorias mencionadas na planilha foram realizadas com visitas em campo ou validação documental?
+
+Existe alguma análise comparativa entre custo total por sc vs produtividade final, ou isso ainda não foi explorado?
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+06-Adubacao_2016a2024.xlsx
+ O que contém:
+Essa planilha registra as aplicações de fertilizantes feitas nas propriedades, contendo colunas como:
+
+Nome_Fertilizante, Fonte, Dose, Unidade, Data_Aplicacao, Modo_Aplicacao, Custo_Producao_Reais_ha, Produtividade_Final_sc_ha.
+
+Análise:
+O objetivo da base é capturar as práticas de adubação adotadas: qual fertilizante foi usado, com que dose, por qual método e a data da aplicação.
+Apesar do bom detalhamento, muitos registros costumam apresentar:
+
+Valores zerados ou faltantes (ex: Dose = 0, Data_Aplicacao em branco),
+
+Dificuldade em padronizar nomes de fertilizantes e unidades.
+
+A planilha é ótima para cruzar com produtividade e investigar resposta à adubação, mas precisa de preenchimento mais robusto.
+
+Perguntas:
+As doses de fertilizante foram definidas com base em análise de solo ou recomendações padrão?
+
+A fonte do fertilizante (NPK, MAP, ureia etc.) é sempre informada de forma padronizada?
+
+Por que há tantos registros com dose = 0? É ausência de adubação ou falta de preenchimento?
+
+Qual critério define o modo de aplicação (ex: incorporado, cobertura, foliar)?
+
+Há algum controle ou validação posterior sobre a eficácia da adubação aplicada?
+
+Como é feita a coleta dessas informações: digitalmente, planilha manual ou app de campo?
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+07-Agroquimicos_2016e2024.xlsx
+O que contém:
+Essa planilha detalha o uso de produtos agroquímicos, como herbicidas, fungicidas e inseticidas, incluindo:
+
+Nome_Agroquimico, Classe_Agroquimico, Fabricante, Dose, Unidade, Forma_Aplicacao, Volume_Calda_l_ha, PH_Calda.
+
+Análise:
+É uma base fundamental para entender o manejo fitossanitário das lavouras. Permite análises de:
+
+Frequência e tipo de aplicação,
+
+Comparação entre custo e produtividade,
+
+Adoção de produtos comerciais e tecnologias novas.
+
+No entanto, é comum ver muitos registros com PH_Calda em branco, doses genéricas e Forma_Aplicacao repetida.
+
+Perguntas:
+As aplicações são feitas conforme calendário técnico ou por observação em campo?
+
+Como é registrada a dose do agroquímico — vem da nota fiscal, receita agronômica ou aplicação real?
+
+O pH da calda é medido e registrado no campo ou estimado?
+
+Há validação da eficácia das aplicações em relação à ocorrência de pragas/doenças?
+
+Existem propriedades que aplicaram mais de 5 agroquímicos? Qual o racional por trás disso?
+
+O custo das aplicações está sendo mensurado por hectare ou ainda não é incorporado nesses dados?
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Análise Dump
 
