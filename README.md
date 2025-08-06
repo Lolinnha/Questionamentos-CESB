@@ -3,7 +3,7 @@ O repositório tem como foco realizar uma análise de dados para questionar poss
 
 ## Análise dos Excels 
 
-- A primeira parte da análise, até o quinto Excel é realizada por meio do Pandas (Google Colab);
+- A primeira parte da análise, até o quinto Excel é realizada por meio do Pandas [Google Colab](https://colab.research.google.com/drive/1rTDTV5pTCWC0VjAy3wQcgtWmfjMKTcRC?usp=sharing);
 - A segunda parte, até o 9b foi feita por meio do próprio Excel
 
 ### 1. Inscrição Cadastro 2016
@@ -59,7 +59,7 @@ Analisamos quais categorias têm mais inscrições. Isso pode indicar áreas de 
 Analisamos quantas inscrições cada consultor gerou e a relação entre consultores e categorias.
 
 <div style="display: flex; justify-content: center; gap: 20px; width: auto;">
-  <img src="./images/inscricao_por_consultor.png.png" alt="Bucket" style="width: 100%">
+  <img src="./images/inscricao_por_consultor.png" alt="Bucket" style="width: 100%">
 </div>
 
 > Como podemos entender o desempenho dos consultores com contagens baixas (1 ou 2 inscrições) em comparação com aqueles com contagens significativas?
@@ -109,7 +109,7 @@ Verificamos as principais doenças e pragas presentes nas safras.
 Verificamos como as técnicas de revolvimento e implementos são utilizados. 
 
 <div style="display: flex; justify-content: center; gap: 20px; width: auto;">
-  <img src="./images/principais_doencas.png" alt="Bucket" style="width: 100%">
+  <img src="./images/manejo_solo.png" alt="Bucket" style="width: 100%">
 </div>
 
 > Os dados estão nulos. Que medidas podem ser tomadas para melhorar a coleta de dados sobre o manejo do solo?
@@ -206,7 +206,7 @@ Verificação da quantidade de tratamentos de sementes por classe de produto
 Verificação de principais produtos utilizados para tratamento de sementes. 
 
 <div style="display: flex; justify-content: center; gap: 20px; width: auto;">
-  <img src="./images/ts.png" alt="Bucket" style="width: 100%">
+  <img src="./images/produtos_tratamentos.png" alt="Bucket" style="width: 100%">
 </div>
 
 > A categoria "#N/D" representa uma quantidade extremamente elevada de dados não informados, superando 30.000. Quais são as razões que podem estar levando a essa falta de informações?
