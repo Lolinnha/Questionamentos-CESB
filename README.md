@@ -222,3 +222,62 @@ Verificação da produtividade média por classe de produto.
 </div>
 
 > A classe de produto "FITO-HORMÔNIO" mostra a maior produtividade média. Quais fatores podem estar impulsionando essa eficácia em comparação com outras classes, como "BIOSTIMULANTE" e "FUNGICIDA"?
+
+## Análise Dump
+
+Foi gerado um arquivo no colab para uma melhor visualização das tabelas utilizadas e geradas, que se encontra no seguinte link: [Google Colab](https://colab.research.google.com/drive/14LJED4fVj0MgKBq0-wWp29-4aUMzfqw5?usp=sharing)
+
+A análise foi realizada em cima do arquivo `Dump_Safras_2019a2020_(MariaDB).sql`, que contém a estrutura de um banco de dados disponibilizado pela CESB.
+
+Para isso, foi criado um container Docker utilizando a imagem do MariaDB.
+
+<img src="./images/print_docker.png" alt="Docker" style="width: 100%">
+
+Em seguida, esse container foi conectado ao DBeaver, permitindo a importação arquivo dump e em sequência a visualização das tabelas.
+
+<img src="./images/print_dbeaver.png" alt="Dbeaver" style="width: 100%">
+
+Após a importação, foi executada uma consulta SQL para listar os nomes e os tipos das colunas de todas as tabelas, possibilitando por último a exportação dessas informações em formato CSV.
+
+<img src="./images/consulta_colunas.png" alt="Consulta colunas" style="width: 100%">
+
+A partir disso, foi possível realizar uma comparação entre as informações contidas no banco de dados e os dados disponibilizados em Excel pela CESB, de modo a analisar e identificar se alguma informação relevante pode ser acrescentada em análises futuras.
+
+O foco da análise foi logística e saúde das colheitas, e os pontos relevantes observados foram os seguintes:
+
+### Transporte e Armazenamento
+A primeira categoria de dados que chamou a atenção no dump foram as informações sobre o transporte da soja. Além dos dados de custo de produção e de venda, a tabela "`colheita_custo`" também apresenta informações relevantes sobre o transporte dessas safras, o que é muito valioso ao se considerar possíveis intercorrências que podem acontecer e causar desperdícios durante o transporte, como manejo incorreto, desvios nas rotas de transferência e outros fatores que podem reduzir a qualidade e até mesmo a quantidade da carga.
+
+Campos como `cidade`, `distancia_armazem`, `horario_entrada_carga`, `horario_saida_carga`, `nome_armazem`, `nome_condutor`, `placa_caminhao`, `peso_bruto`, `peso_tara_caminhao` e etc, podem ser relevantes para identificar métodos de transporte e manuseio mais eficazes na preservação da soja. Além disso, esses dados podem ser utilizados em auditorias sobre o tempo de transferência entre armazéns e outras instalações. As informações sobre o armazém também podem servir como parâmetro para avaliar sua capacidade e preparo para o recebimento e armazenamento das safras, identificando assim abordagens para diminuir qualquer desperdicío durante essa etapa do processo.
+
+Foi realizado uma consulta SQL no dump para demonstrar possíveis relações e análises que podem ser mais aprofundados a cerca das informações citadas.
+
+<img src="./images/consulta_transporte.png" alt="Consulta transporte" style="width: 100%">
+
+Trazendo como resultado algumas informações sobre as pesagens realizadas durante o processo de colheita, demonstrando que há uma diferença dos valores entre as etapas, e também algumas avarias que podem interferir na produtividade final da colheita.
+
+### Saúde da Safra
+Embora as planilhas disponibilizadas tragam informações sobre a qualidade e classificação do solo, há muitos dados mais específicos sobre a saúde da soja em diferentes etapas da colheita, como nas tabelas "`adubacao_cobertura`", "`adubacao_organica`", "`adubacao_pre_semeadura`", "`adubacao_semeadura"` que podem ser relevantes para identificar comportamentos anormais, influenciados por pragas, sazonalidade ou ainda complementar diagnósticos relacionados a deficiências do solo, que também podem impactar diretamente a qualidade e a quantidade da colheita.
+
+Por exemplo, a tabela "`colheita_custo`" contém campos como `avariados_totais`, `sverdeados`, `impureza`, `quebrados`, `media_pmg`, `perdas_colheitas`, `distribuicao_sementes`, `procedencia_sementes`, `graos_por_vagem`, `nematoides_controle`, `nematoides_incidencia_na_propriedade`, `nematoides_tipo`, `lacres_carregamento`, `colheita_desecacao`, `estadio_planta`, `herbicida`, `perdas_colheita`, entre outros, que podem ser bastante relevantes para identificar possíveis problemas e padrões, especialmente ao comparar os resultados com os de outras épocas do ano em que as condições de clima e solo sejam semelhantes, a fim de identificar outros problemas que podem estar passando despecebido e influenciam o resultado.
+
+Além disso, existem as tabelas "`desafiosoja_historicaltratamentosemente`" e "`desafiosoja_historicaltratamentosementeagroquimico`", que trazem informações relevantes sobre o tratamento de sementes, como o histórico de alterações, os motivos para cada mudança, e os agrotóxicos e produtos utilizados nos tratamentos, que também pode ser utilizada para mapear e correlacionar com outras informações que tragam insights valiosos sobre interferências que minimizam a produtividade da colheita.
+
+Abaixo tem outro exemplo de uma consulta realizada, onde da pra comparar o resultado em kg da produtividade final e algumas perdas e avarias que houveram durante a colheita.
+
+<img src="./images/consulta_saude.png" alt="Consulta saúde" style="width: 100%">
+
+### Implantação agrícola
+Dentro do dump utilizado, existe uma tabela chamada "`implantacao_agricola`", que traz detalhes sobre as sementes por meio de campos como `tamanho_semente`, `vigor_semente` e `germinacao_semente`. Além disso, existe também informações sobre o que foi realizado no plantio, como a quantidade de sementes, o espaçamento entre elas e o espaço ocupado por metro, representados nos campos `quantidade_sementes`, `espacamento_linhas`, `sistema_distribuicao_semente` e `sementes_por_metro`. Esses dados podem ser úteis para identificar diferentes métodos de plantio da soja, com o objetivo de maximizar os resultados obtidos na colheita, além de também complementar os outros dados citados para uma análise mais aprofundada.
+
+Abaixo está a consulta realizada para uma melhor visualização desses dados.
+
+<img src="./images/consulta_implantacao.png" alt="Consulta implantação" style="width: 100%">
+
+Realizando uma análise mais aprofundada e cruzando os dados, é possível mapear um panorama geral sobre as sementes e verificar se essas informações influenciam nos resultados de produtividade, além de identificar técnicas mais apropriadas para lidar com sementes que possuem características diferentes.
+
+### Conclusão
+Apesar de a análise do dump ter sido focada em um brainstorm e na escolha de um ponto focal, ela foi útil para identificarmos, inicialmente, aspectos do banco de dados que podem ser mais explorados com o objetivo de preservar a qualidade e a quantidade das safras, e que não eram o principal foco nos dados de análise enviados pelo CESB.
+
+> [ChatGPT](https://chatgpt.com/share/6893634d-cd40-8005-aee3-9eacd2386f9b
+) foi utilizado como apoio na criação do Docker e utilização do DBeaver e, principalmente, na correção de textos.
